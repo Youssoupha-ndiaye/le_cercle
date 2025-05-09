@@ -21,7 +21,6 @@ int main () {
     cout << "affichage du centre du cercle " << endl;
     Centre p=c1.Getcentre();
     c1.affichage();
-   // cout << "le centre du cercle est :" << p << endl; 
     i=c1.perimetre();
     cout << "le perimetre du cercle est :" << i << endl; 
     j=c1.surface();

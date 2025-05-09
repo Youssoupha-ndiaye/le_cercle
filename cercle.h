@@ -30,7 +30,7 @@ class Cercle{
         bool operator==(Cercle&);
         friend ostream& operator<<(ostream&,Cercle&);
         /*pour avoir l'affichage du centre j'ai surdéfinit une methode
-        aui permet l'affichage du centre . */
+        qui permet l'affichage du centre . */
         void affichage();
  
 
