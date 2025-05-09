@@ -4,6 +4,8 @@
 #include <iostream> 
 using namespace std;
 
+const double PI = 3.141592653589;
+
 typedef struct{
     unsigned int x;
     unsigned int y;
@@ -16,6 +18,7 @@ class Cercle{
     public:
         Cercle (unsigned int , unsigned int , unsigned int);
         unsigned int GetRayon();
+        Centre Getcentre();
         unsigned int perimetre();
         float surface();
         Cercle SetRayon(unsigned int);
@@ -26,6 +29,10 @@ class Cercle{
         //la surdéfinition des methodes << et ==
         bool operator==(Cercle&);
         friend ostream& operator<<(ostream&,Cercle&);
+        /*pour avoir l'affichage du centre j'ai surdéfinit une methode
+        aui permet l'affichage du centre . */
+        void affichage();
+ 
 
 };
 

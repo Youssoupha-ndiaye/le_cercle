@@ -18,6 +18,10 @@ int main () {
     cout << "affichage du cercle apres la modification du centre :" << endl;
     c4=c2.SetCentre(2,1);
     c4.afficher();
+    cout << "affichage du centre du cercle " << endl;
+    Centre p=c1.Getcentre();
+    c1.affichage();
+   // cout << "le centre du cercle est :" << p << endl; 
     i=c1.perimetre();
     cout << "le perimetre du cercle est :" << i << endl; 
     j=c1.surface();

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "cercle.h"
+#include <numbers>
 
 using namespace std;
 
@@ -16,12 +17,15 @@ Cercle::Cercle (unsigned int a , unsigned int b , unsigned int r){
 unsigned int Cercle:: GetRayon(){
     return rayon;
 }
+Centre Cercle::Getcentre(){
+    return centre;
+}
 unsigned int Cercle::perimetre(){
-    return  (3.14*rayon*rayon);
+    return  2*PI*rayon;
 
 }
 float Cercle::surface(){
-    return 3,14*rayon*rayon;
+    return PI*rayon*rayon;
 }
 Cercle Cercle::SetRayon(unsigned int a){
     return Cercle(centre.x,centre.y,rayon+a);
@@ -49,7 +53,12 @@ bool Cercle::operator==(Cercle&c){
     return false;
 }
 ostream& operator<<(ostream& sortie,Cercle&c){
-    sortie << "rayon="<< c.rayon << "cm"  <<" " << "centre =" << "(" << c.centre.x <<","<< c.centre.y <<")"<< endl; 
+    sortie << "rayon="<< c.rayon << "cm"  <<"  " << "centre =" << "(" << c.centre.x <<","<< c.centre.y <<")"<< endl; 
     return sortie;
 }
+void Cercle::affichage(){
+    Centre centre=Getcentre();
+    cout << " le centre du cercle est : " "("<< centre.x << "," << centre.y << ")" << endl;
+}
+
 
