@@ -20,6 +20,9 @@ unsigned int Cercle::perimetre(){
     return  (3.14*rayon*rayon);
 
 }
+float Cercle::surface(){
+    return 3,14*rayon*rayon;
+}
 Cercle Cercle::SetRayon(unsigned int a){
     return Cercle(centre.x,centre.y,rayon+a);
 }
@@ -38,5 +41,15 @@ void Cercle::afficher(){
     cout << "centre =" << "(" << centre.x <<","<< centre.y <<")"<< endl; 
 
 }
-
+// la surdéfinition des methodes 
+bool Cercle::operator==(Cercle&c){
+     if(centre.x==c.centre.x && centre.y==c.centre.y && rayon==c.rayon){
+        return true;
+    }
+    return false;
+}
+ostream& operator<<(ostream& sortie,Cercle&c){
+    sortie << "rayon="<< c.rayon << "cm"  <<" " << "centre =" << "(" << c.centre.x <<","<< c.centre.y <<")"<< endl; 
+    return sortie;
+}
 

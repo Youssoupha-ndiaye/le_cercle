@@ -23,6 +23,10 @@ class Cercle{
         bool Compare(Cercle&);
         void afficher();
 
+        //la surdéfinition des methodes << et ==
+        bool operator==(Cercle&);
+        friend ostream& operator<<(ostream&,Cercle&);
+
 };
 
 
